@@ -16,15 +16,11 @@ const Login = () => {
   const navigate = useNavigate();
 
   const { setCurrentUser } = useContext(UserContext);
-  const inputRef = useRef(null);
 
   const changeInputHandler = (e) => {
     setUserData((prevState) => {
       return { ...prevState, [e.target.name]: e.target.value };
     });
-    if (inputRef.current) {
-      console.log("Input value:", inputRef.current.value);
-    }
   };
 
   console.log(userData);
@@ -35,13 +31,7 @@ const Login = () => {
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_BASE_URL}/users/login`,
-        userData,
-        {
-          headers: {
-            "Content-Type":
-              "application/x-www-form-urlencoded; charset=UTF-8;application/json",
-          },
-        }
+        userData
       );
       const user = await response.data;
       setCurrentUser(user);
@@ -56,10 +46,10 @@ const Login = () => {
     <section className="login">
       <div className="container">
         <h2>Sign In</h2>
-        <form action="" className="form login__form" onSubmit={loginUser}>
+        <form className="form login__form" onSubmit={loginUser}>
           {error && <p className="form__error-message">{error}</p>}
           <input
-            type="email"
+            type="text"
             placeholder="Email"
             name="email"
             value={userData.email}
