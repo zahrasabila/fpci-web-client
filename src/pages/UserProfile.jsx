@@ -104,7 +104,7 @@ const UserProfile = () => {
           <div className="avatar__wrapper">
             <div className="profile__avatar">
               <img
-                src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${avatar}`}
+                src={`${process.env.REACT_APP_ASSETS_URL}/tmp/${avatar}`}
                 alt=""
               />
             </div>
@@ -124,7 +124,8 @@ const UserProfile = () => {
             {isAvatarTouched && (
               <button
                 className="profile__avatar-btn"
-                onClick={changeAvatarHandler}>
+                onClick={changeAvatarHandler}
+              >
                 <FaCheck />
               </button>
             )}
@@ -135,7 +136,8 @@ const UserProfile = () => {
           <form
             action=""
             className="form profile__form"
-            onSubmit={updateUserHandler}>
+            onSubmit={updateUserHandler}
+          >
             {error && <p className="form__error-message">{error}</p>}
             <input
               type="text"

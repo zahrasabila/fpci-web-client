@@ -18,7 +18,7 @@ const PostItem = ({
     <article className="post">
       <div className="post__thumbnail">
         <img
-          src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${thumbnail}`}
+          src={`${process.env.REACT_APP_ASSETS_URL}/tmp/${thumbnail}`}
           alt={title}
         />
       </div>
@@ -29,7 +29,8 @@ const PostItem = ({
               <div className="square"></div>
               <Link
                 to={`posts/categories/${category}`}
-                className="btn category">
+                className="btn category"
+              >
                 {category}
               </Link>
             </div>
@@ -45,9 +46,9 @@ const PostItem = ({
         <div className="post__footer">
           <PostAuthor creator={creator} createdAt={createdAt} />
           <Link to={`/posts/${postID}`}>
-          <button className="arrow-icon">
-            <IoIosArrowRoundForward />
-          </button>
+            <button className="arrow-icon">
+              <IoIosArrowRoundForward />
+            </button>
           </Link>
         </div>
       </div>
