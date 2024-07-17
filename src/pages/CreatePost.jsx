@@ -54,9 +54,18 @@ const CreatePost = () => {
 
   const POST_CATEGORIES = [
     "Uncategorized",
-    "Cultural reflections",
-    "Political dynamics",
-    "Global security watch"
+    "Lifestyle",
+    "Travel",
+    "Food",
+    "Photography",
+    "Fashion",
+    "Music",
+    "Sports",
+    "Business",
+    "Technology",
+    "Health",
+    "Entertainment",
+    "Education",
   ];
 
   const createPost = async (e) => {
