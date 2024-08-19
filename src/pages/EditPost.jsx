@@ -57,18 +57,9 @@ const EditPost = () => {
 
   const POST_CATEGORIES = [
     "Uncategorized",
-    "Lifestyle",
-    "Travel",
-    "Food",
-    "Photography",
-    "Fashion",
-    "Music",
-    "Sports",
-    "Business",
-    "Technology",
-    "Health",
-    "Entertainment",
-    "Education",
+    "Cultural reflections",
+    "Political dynamics",
+    "GLobal security watch",
   ];
 
   useEffect(() => {
@@ -128,7 +119,8 @@ const EditPost = () => {
           <select
             name="category"
             value={category}
-            onChange={(e) => setCategory(e.target.value)}>
+            onChange={(e) => setCategory(e.target.value)}
+          >
             {POST_CATEGORIES.map((category) => (
               <option key={category}>{category} </option>
             ))}

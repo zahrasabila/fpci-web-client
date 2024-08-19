@@ -54,18 +54,9 @@ const CreatePost = () => {
 
   const POST_CATEGORIES = [
     "Uncategorized",
-    "Lifestyle",
-    "Travel",
-    "Food",
-    "Photography",
-    "Fashion",
-    "Music",
-    "Sports",
-    "Business",
-    "Technology",
-    "Health",
-    "Entertainment",
-    "Education",
+    "Cultural reflections",
+    "Political dynamics",
+    "GLobal security watch",
   ];
 
   const createPost = async (e) => {
@@ -101,7 +92,8 @@ const CreatePost = () => {
         <form
           action=""
           className="form create-post__form"
-          onSubmit={createPost}>
+          onSubmit={createPost}
+        >
           <input
             type="text"
             placeholder="Title"
@@ -112,7 +104,8 @@ const CreatePost = () => {
           <select
             name="category"
             value={category}
-            onChange={(e) => setCategory(e.target.value)}>
+            onChange={(e) => setCategory(e.target.value)}
+          >
             {POST_CATEGORIES.map((category) => (
               <option key={category}>{category} </option>
             ))}

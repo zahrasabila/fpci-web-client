@@ -8,8 +8,8 @@ import { UserContext } from "../context/userContext";
 
 const Login = () => {
   const [userData, setUserData] = useState({
-    email: "admin@gmail.com",
-    password: "admin123",
+    email: "",
+    password: "",
   });
 
   const [error, setError] = useState("");
